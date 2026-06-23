@@ -1,0 +1,383 @@
+{
+  "skills": [
+    {
+      "id": "atk_boost",
+      "name": "攻击力提升",
+      "description": "增加基础攻击力",
+      "rarity": 0,
+      "category": 0,
+      "baseValue": 0.2,
+      "valuePerLevel": 0.2
+    },
+    {
+      "id": "atk_speed_boost",
+      "name": "攻击速度提升",
+      "description": "增加攻击速度",
+      "rarity": 0,
+      "category": 0,
+      "baseValue": 0.3,
+      "valuePerLevel": 0.3
+    },
+    {
+      "id": "hp_boost",
+      "name": "生命值提升",
+      "description": "增加最大生命值",
+      "rarity": 0,
+      "category": 0,
+      "baseValue": 0.2,
+      "valuePerLevel": 0.2
+    },
+    {
+      "id": "move_speed_boost",
+      "name": "移动速度提升",
+      "description": "增加移动速度",
+      "rarity": 0,
+      "category": 0,
+      "baseValue": 0.1,
+      "valuePerLevel": 0.1
+    },
+    {
+      "id": "crit_rate_boost",
+      "name": "暴击率提升",
+      "description": "增加暴击率",
+      "rarity": 1,
+      "category": 0,
+      "baseValue": 0.03,
+      "valuePerLevel": 0.03
+    },
+    {
+      "id": "crit_dmg_boost",
+      "name": "暴击伤害提升",
+      "description": "增加暴击伤害",
+      "rarity": 1,
+      "category": 0,
+      "baseValue": 0.4,
+      "valuePerLevel": 0.4
+    },
+    {
+      "id": "armor_boost",
+      "name": "护甲提升",
+      "description": "增加护甲",
+      "rarity": 1,
+      "category": 0,
+      "baseValue": 5,
+      "valuePerLevel": 5
+    },
+    {
+      "id": "hp_regen_boost",
+      "name": "生命恢复提升",
+      "description": "每秒恢复最大生命值",
+      "rarity": 1,
+      "category": 0,
+      "baseValue": 0.005,
+      "valuePerLevel": 0.005
+    },
+    {
+      "id": "atk_range_boost",
+      "name": "攻击范围提升",
+      "description": "增加攻击范围",
+      "rarity": 2,
+      "category": 0,
+      "baseValue": 0.1,
+      "valuePerLevel": 0.1
+    },
+    {
+      "id": "proj_count_boost",
+      "name": "弹幕数量提升",
+      "description": "增加同时发射子弹数",
+      "rarity": 2,
+      "category": 0,
+      "baseValue": 1,
+      "valuePerLevel": 1
+    },
+    {
+      "id": "shield_value_boost",
+      "name": "护盾值提升",
+      "description": "增加护盾吸收量",
+      "rarity": 2,
+      "category": 0,
+      "baseValue": 0.15,
+      "valuePerLevel": 0.15
+    },
+    {
+      "id": "proj_penetrate_boost",
+      "name": "穿透强化",
+      "description": "子弹可穿透更多敌人",
+      "rarity": 2,
+      "category": 0,
+      "baseValue": 2,
+      "valuePerLevel": 2
+    },
+    {
+      "id": "proj_range_boost",
+      "name": "射程提升",
+      "description": "增加子弹射程",
+      "rarity": 1,
+      "category": 0,
+      "baseValue": 0.1,
+      "valuePerLevel": 0.1
+    },
+    {
+      "id": "proj_speed_boost",
+      "name": "子弹速度提升",
+      "description": "增加子弹速度",
+      "rarity": 0,
+      "category": 0,
+      "baseValue": 0.1,
+      "valuePerLevel": 0.1
+    },
+
+    {
+      "id": "fireball_boost",
+      "name": "火球术强化",
+      "description": "火球术伤害提升",
+      "rarity": 1,
+      "category": 1,
+      "baseValue": 0.15,
+      "valuePerLevel": 0.15
+    },
+    {
+      "id": "arrow_boost",
+      "name": "箭矢强化",
+      "description": "箭矢伤害提升",
+      "rarity": 1,
+      "category": 1,
+      "baseValue": 0.15,
+      "valuePerLevel": 0.15
+    },
+    {
+      "id": "fireball_aoe_boost",
+      "name": "火球术范围提升",
+      "description": "火球术AOE范围提升",
+      "rarity": 1,
+      "category": 1,
+      "baseValue": 0.15,
+      "valuePerLevel": 0.15
+    },
+    {
+      "id": "passive_cd_boost",
+      "name": "被动技能强化",
+      "description": "被动技能冷却缩减",
+      "rarity": 1,
+      "category": 1,
+      "baseValue": 0.05,
+      "valuePerLevel": 0.05
+    },
+    {
+      "id": "shield_enhance",
+      "name": "护盾强化",
+      "description": "护盾持续时间延长",
+      "rarity": 1,
+      "category": 1,
+      "baseValue": 1,
+      "valuePerLevel": 1
+    },
+    {
+      "id": "speed_enhance",
+      "name": "加速强化",
+      "description": "加速效果提升",
+      "rarity": 1,
+      "category": 1,
+      "baseValue": 0.2,
+      "valuePerLevel": 0.2
+    },
+    {
+      "id": "aoe_range_boost",
+      "name": "AOE范围提升",
+      "description": "AOE爆炸范围提升",
+      "rarity": 2,
+      "category": 1,
+      "baseValue": 0.15,
+      "valuePerLevel": 0.15
+    },
+    {
+      "id": "skill_cd_boost",
+      "name": "技能冷却缩减",
+      "description": "所有技能冷却时间缩减",
+      "rarity": 2,
+      "category": 1,
+      "baseValue": 0.05,
+      "valuePerLevel": 0.05
+    },
+    {
+      "id": "skill_dmg_boost",
+      "name": "技能伤害提升",
+      "description": "所有技能伤害提升",
+      "rarity": 3,
+      "category": 1,
+      "baseValue": 0.1,
+      "valuePerLevel": 0.1
+    },
+    {
+      "id": "burn_effect",
+      "name": "燃烧效果",
+      "description": "攻击概率附加燃烧，每秒造成伤害",
+      "rarity": 1,
+      "category": 2,
+      "baseValue": 0.02,
+      "valuePerLevel": 0.02
+    },
+    {
+      "id": "freeze_effect",
+      "name": "冰冻效果",
+      "description": "攻击概率冰冻敌人",
+      "rarity": 1,
+      "category": 2,
+      "baseValue": 0.5,
+      "valuePerLevel": 0.5
+    },
+    {
+      "id": "stun_effect",
+      "name": "眩晕效果",
+      "description": "攻击概率眩晕敌人",
+      "rarity": 1,
+      "category": 2,
+      "baseValue": 0.3,
+      "valuePerLevel": 0.3
+    },
+    {
+      "id": "slow_effect",
+      "name": "减速效果",
+      "description": "攻击概率减速敌人",
+      "rarity": 0,
+      "category": 2,
+      "baseValue": 0.3,
+      "valuePerLevel": 0.1
+    },
+    {
+      "id": "lifesteal_effect",
+      "name": "吸血效果",
+      "description": "攻击回复生命值",
+      "rarity": 2,
+      "category": 2,
+      "baseValue": 0.01,
+      "valuePerLevel": 0.01
+    },
+    {
+      "id": "splash_effect",
+      "name": "溅射效果",
+      "description": "攻击对周围敌人造成伤害",
+      "rarity": 2,
+      "category": 2,
+      "baseValue": 0.2,
+      "valuePerLevel": 0.2
+    },
+    {
+      "id": "explosion_effect",
+      "name": "爆炸效果",
+      "description": "攻击概率产生范围爆炸",
+      "rarity": 3,
+      "category": 2,
+      "baseValue": 0.05,
+      "valuePerLevel": 0.05
+    },
+    {
+      "id": "multi_shot",
+      "name": "多重射击",
+      "description": "额外发射子弹",
+      "rarity": 3,
+      "category": 2,
+      "baseValue": 1,
+      "valuePerLevel": 1
+    },
+    {
+      "id": "penetrate_boost",
+      "name": "穿透强化",
+      "description": "子弹穿透更多敌人",
+      "rarity": 3,
+      "category": 2,
+      "baseValue": 2,
+      "valuePerLevel": 2
+    },
+    {
+      "id": "armor_boost_survival",
+      "name": "护甲强化",
+      "description": "增加护甲",
+      "rarity": 0,
+      "category": 3,
+      "baseValue": 3,
+      "valuePerLevel": 3
+    },
+    {
+      "id": "dmg_reduction",
+      "name": "伤害减免",
+      "description": "受到伤害减少",
+      "rarity": 1,
+      "category": 3,
+      "baseValue": 0.03,
+      "valuePerLevel": 0.03
+    },
+    {
+      "id": "hp_regen",
+      "name": "生命恢复",
+      "description": "每秒恢复最大生命值",
+      "rarity": 1,
+      "category": 3,
+      "baseValue": 0.005,
+      "valuePerLevel": 0.005
+    },
+    {
+      "id": "shield_periodic",
+      "name": "护盾效果",
+      "description": "周期性获得护盾",
+      "rarity": 2,
+      "category": 3,
+      "baseValue": 0.1,
+      "valuePerLevel": 0.05
+    },
+    {
+      "id": "invincible_effect",
+      "name": "无敌效果",
+      "description": "受击概率触发无敌",
+      "rarity": 3,
+      "category": 3,
+      "baseValue": 0.05,
+      "valuePerLevel": 0.05
+    },
+    {
+      "id": "reflect_effect",
+      "name": "反伤效果",
+      "description": "受击反弹伤害",
+      "rarity": 2,
+      "category": 3,
+      "baseValue": 0.2,
+      "valuePerLevel": 0.2
+    },
+    {
+      "id": "dodge_effect",
+      "name": "闪避效果",
+      "description": "概率闪避攻击",
+      "rarity": 3,
+      "category": 3,
+      "baseValue": 0.05,
+      "valuePerLevel": 0.05
+    },
+    {
+      "id": "block_effect",
+      "name": "格挡效果",
+      "description": "概率格挡攻击减少伤害",
+      "rarity": 1,
+      "category": 3,
+      "baseValue": 0.1,
+      "valuePerLevel": 0.1
+    },
+    {
+      "id": "all_stats_boost",
+      "name": "全属性提升",
+      "description": "所有基础属性提升",
+      "rarity": 1,
+      "category": 3,
+      "baseValue": 0.03,
+      "valuePerLevel": 0.03
+    },
+    {
+      "id": "xp_boost",
+      "name": "经验获取提升",
+      "description": "增加经验获取量",
+      "rarity": 0,
+      "category": 4,
+      "baseValue": 0.1,
+      "valuePerLevel": 0.1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "Slime": {
+    "prefabPath": "Prefabs/Enemy/Normal/Slime",
+    "maxCount": 20,
+    "spawnDistance": 5.0
+  },
+  "Skeleton": {
+    "prefabPath": "Prefabs/Enemy/Normal/Skeleton",
+    "maxCount": 20,
+    "spawnDistance": 5.0
+  },
+  "Spider": {
+    "prefabPath": "Prefabs/Enemy/Normal/Spider",
+    "maxCount": 20,
+    "spawnDistance": 5.0
+  },
+  "Dragon": {
+    "prefabPath": "Prefabs/Enemy/Boss/Dragon",
+    "maxCount": 1,
+    "spawnDistance": 8.0
+  }
+}

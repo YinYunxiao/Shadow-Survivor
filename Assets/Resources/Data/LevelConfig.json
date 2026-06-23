@@ -1,0 +1,104 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "xpRequired": 10,
+      "hpBonusPercent": 0.10
+    },
+    {
+      "level": 2,
+      "xpRequired": 15,
+      "hpBonusPercent": 0.10
+    },
+    {
+      "level": 3,
+      "xpRequired": 22,
+      "hpBonusPercent": 0.10
+    },
+    {
+      "level": 4,
+      "xpRequired": 31,
+      "hpBonusPercent": 0.10
+    },
+    {
+      "level": 5,
+      "xpRequired": 42,
+      "hpBonusPercent": 0.12
+    },
+    {
+      "level": 6,
+      "xpRequired": 55,
+      "hpBonusPercent": 0.12
+    },
+    {
+      "level": 7,
+      "xpRequired": 70,
+      "hpBonusPercent": 0.12
+    },
+    {
+      "level": 8,
+      "xpRequired": 88,
+      "hpBonusPercent": 0.12
+    },
+    {
+      "level": 9,
+      "xpRequired": 109,
+      "hpBonusPercent": 0.15
+    },
+    {
+      "level": 10,
+      "xpRequired": 133,
+      "hpBonusPercent": 0.15
+    },
+    {
+      "level": 11,
+      "xpRequired": 160,
+      "hpBonusPercent": 0.15
+    },
+    {
+      "level": 12,
+      "xpRequired": 190,
+      "hpBonusPercent": 0.15
+    },
+    {
+      "level": 13,
+      "xpRequired": 224,
+      "hpBonusPercent": 0.18
+    },
+    {
+      "level": 14,
+      "xpRequired": 262,
+      "hpBonusPercent": 0.18
+    },
+    {
+      "level": 15,
+      "xpRequired": 304,
+      "hpBonusPercent": 0.18
+    },
+    {
+      "level": 16,
+      "xpRequired": 350,
+      "hpBonusPercent": 0.20
+    },
+    {
+      "level": 17,
+      "xpRequired": 400,
+      "hpBonusPercent": 0.20
+    },
+    {
+      "level": 18,
+      "xpRequired": 455,
+      "hpBonusPercent": 0.20
+    },
+    {
+      "level": 19,
+      "xpRequired": 515,
+      "hpBonusPercent": 0.20
+    },
+    {
+      "level": 20,
+      "xpRequired": 580,
+      "hpBonusPercent": 0.25
+    }
+  ]
+}

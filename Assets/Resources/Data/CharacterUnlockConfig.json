@@ -1,0 +1,28 @@
+{
+    "unlockConditions": {
+        "Knight": {
+            "type": "default",
+            "url": "ui://Other/Knight"
+        },
+        "Archer": {
+            "type": "gold",
+            "cost": 100,
+            "url": "ui://Other/Archer"
+        },
+        "Wizard": {
+            "type": "gold",
+            "cost": 200,
+            "url": "ui://Other/Wizard"
+        },
+        "Paladin": {
+            "type": "level",
+            "requireLevel": 10,
+            "url": "ui://Other/Paladin"
+        },
+        "DeathKnight": {
+            "type": "kill",
+            "requireKills": 20,
+            "url": "ui://Other/DeathKnight"
+        }
+    }
+}

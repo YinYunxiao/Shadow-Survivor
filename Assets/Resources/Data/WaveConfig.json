@@ -1,0 +1,123 @@
+{
+  "waves": [
+    {
+      "wave": 1,
+      "killTarget": 10,
+      "enemies": [
+        { "name": "Slime", "weight": 100 }
+      ],
+      "maxAlive": 5,
+      "spawnInterval": 2.0,
+      "hpMult": 1.0,
+      "dmgMult": 1.0
+    },
+    {
+      "wave": 2,
+      "killTarget": 15,
+      "enemies": [
+        { "name": "Slime", "weight": 70 },
+        { "name": "Skeleton", "weight": 30 }
+      ],
+      "maxAlive": 8,
+      "spawnInterval": 1.8,
+      "hpMult": 1.1,
+      "dmgMult": 1.0
+    },
+    {
+      "wave": 3,
+      "killTarget": 20,
+      "enemies": [
+        { "name": "Slime", "weight": 50 },
+        { "name": "Skeleton", "weight": 30 },
+        { "name": "Spider", "weight": 20 }
+      ],
+      "maxAlive": 10,
+      "spawnInterval": 1.5,
+      "hpMult": 1.2,
+      "dmgMult": 1.1
+    },
+    {
+      "wave": 4,
+      "killTarget": 25,
+      "enemies": [
+        { "name": "Slime", "weight": 30 },
+        { "name": "Skeleton", "weight": 40 },
+        { "name": "Spider", "weight": 30 }
+      ],
+      "maxAlive": 12,
+      "spawnInterval": 1.3,
+      "hpMult": 1.4,
+      "dmgMult": 1.2
+    },
+    {
+      "wave": 5,
+      "killTarget": 0,
+      "boss": "Dragon",
+      "enemies": [],
+      "maxAlive": 0,
+      "spawnInterval": 0,
+      "hpMult": 1.0,
+      "dmgMult": 1.0
+    },
+    {
+      "wave": 6,
+      "killTarget": 30,
+      "enemies": [
+        { "name": "Slime", "weight": 20 },
+        { "name": "Skeleton", "weight": 40 },
+        { "name": "Spider", "weight": 40 }
+      ],
+      "maxAlive": 15,
+      "spawnInterval": 1.2,
+      "hpMult": 1.6,
+      "dmgMult": 1.3
+    },
+    {
+      "wave": 7,
+      "killTarget": 35,
+      "enemies": [
+        { "name": "Slime", "weight": 10 },
+        { "name": "Skeleton", "weight": 40 },
+        { "name": "Spider", "weight": 50 }
+      ],
+      "maxAlive": 18,
+      "spawnInterval": 1.0,
+      "hpMult": 1.8,
+      "dmgMult": 1.4
+    },
+    {
+      "wave": 8,
+      "killTarget": 40,
+      "enemies": [
+        { "name": "Skeleton", "weight": 50 },
+        { "name": "Spider", "weight": 50 }
+      ],
+      "maxAlive": 20,
+      "spawnInterval": 0.8,
+      "hpMult": 2.0,
+      "dmgMult": 1.5
+    },
+    {
+      "wave": 9,
+      "killTarget": 45,
+      "enemies": [
+        { "name": "Skeleton", "weight": 40 },
+        { "name": "Spider", "weight": 60 }
+      ],
+      "maxAlive": 22,
+      "spawnInterval": 0.7,
+      "hpMult": 2.3,
+      "dmgMult": 1.6
+    },
+    {
+      "wave": 10,
+      "killTarget": 0,
+      "boss": "Dragon",
+      "enemies": [],
+      "maxAlive": 0,
+      "spawnInterval": 0,
+      "hpMult": 1.5,
+      "dmgMult": 1.3
+    }
+  ]
+}
