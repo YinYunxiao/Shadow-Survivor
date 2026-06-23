@@ -2,6 +2,8 @@
 
 一款类吸血鬼幸存者的移动端竖屏 Roguelike 游戏。玩家选择不同职业的角色，在波次敌人中生存，通过升级获取技能加成强化自身。
 
+---
+
 ## 主要玩法
 
 ### 角色系统
@@ -70,17 +72,64 @@
 
 ## 游戏截图
 
-| 主界面 | 角色商店 |
+| 主界面 | 角色选择 |
 |-------|---------|
-| ![主界面](screenshots/main_menu1.png) | ![角色商店](screenshots/character_shop1.png) |
+| ![主界面](screenshots/main_menu1.png) | ![角色选择](screenshots/character_select.png) |
 
-| 游戏中 | 玩家信息 |
-|-------|---------|
-| ![游戏中](screenshots/main_menu2.png) | ![玩家信息](screenshots/player_info.png) |
+| 战斗 | 技能选择 |
+|-----|---------|
+| ![战斗](screenshots/melee_attack.png) | ![技能选择](screenshots/skill_select.png) |
 
-| 设置 | 角色商店详情 |
-|-----|------------|
-| ![设置](screenshots/setting.png) | ![角色商店详情](screenshots/character_shop2.png) |
+| 角色商店 | 角色商店详情 |
+|---------|------------|
+| ![角色商店](screenshots/character_shop1.png) | ![角色商店详情](screenshots/character_shop2.png) |
+
+| 角色商店详情2 | 玩家信息 |
+|-------------|---------|
+| ![角色商店详情2](screenshots/character_shop3.png) | ![玩家信息](screenshots/player_info.png) |
+
+| 设置 | BOSS战 |
+|-----|-------|
+| ![设置](screenshots/setting.png) | ![BOSS战](screenshots/boss_fight.png) |
+
+---
+
+## 屏幕适配
+
+采用 FairyGUI 的 `SetContentScaleFactor` + `ScreenMatchMode.MatchWidth` 方案，支持多种分辨率自适应。
+
+### 适配策略
+
+- **设计分辨率**：1284 × 2778（竖屏）
+- **适配模式**：`UIContentScaler.ScreenMatchMode.MatchWidth`（宽度匹配，高度自适应）
+- **适配逻辑**：UI 按设计宽度等比缩放，高度超出部分自动扩展，保证不同宽高比下 UI 布局一致
+
+### 多分辨率验证
+
+已测试以下分辨率，UI 布局和游戏体验均正常：
+
+| 分辨率 | 宽高比 | 截图 |
+|--------|--------|------|
+| 1920 × 1080 | 16:9 | ![1920x1080 主界面](screenshots/1920x1080_main_menu.png) |
+| 2160 × 1080 | 18:9 | ![2160x1080 主界面](screenshots/2160x1080_main_menu.png) |
+| 2960 × 1440 | 18.5:9 | ![2960x1440 主界面](screenshots/2960x1440_main_menu.png) |
+
+| 分辨率 | 角色选择 | 战斗 |
+|--------|---------|------|
+| 1920 × 1080 | ![1920x1080 角色选择](screenshots/1920x1080_char_select.png) | ![1920x1080 战斗](screenshots/1920x1080_combat.png) |
+| 2160 × 1080 | ![2160x1080 角色选择](screenshots/2160x1080_char_select.png) | ![2160x1080 战斗](screenshots/2160x1080_combat.png) |
+| 2960 × 1440 | ![2960x1440 角色选择](screenshots/2960x1440_char_select.png) | ![2960x1440 战斗](screenshots/2960x1440_combat.png) |
+
+### 适配实现
+
+```csharp
+// UIManager.cs
+GRoot.inst.SetContentScaleFactor(1284, 2778, UIContentScaler.ScreenMatchMode.MatchWidth);
+```
+
+- FairyGUI 的 `MatchWidth` 模式保证 UI 宽度始终铺满屏幕
+- 游戏内逻辑使用世界坐标（像素无关），相机自动适配视口
+- 摇杆采用动态创建 + 触摸位置定位，适配任意屏幕尺寸
 
 ---
 
