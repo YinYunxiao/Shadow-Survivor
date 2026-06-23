@@ -27,7 +27,7 @@ public class PlayingPanelController : System.IDisposable
     }
     private void InitJoystick()
     {
-        _joystickCtrl = new JoystickController(_view.joystick);
+        _joystickCtrl = new JoystickController(_view);
         InputManager.SetJoystick(_joystickCtrl);
     }
     private void InitHPBar()

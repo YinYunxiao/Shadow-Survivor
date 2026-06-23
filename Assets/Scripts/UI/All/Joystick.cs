@@ -7,6 +7,7 @@ namespace All
 {
     public partial class Joystick : GComponent
     {
+        public Controller show;
         public GGraph back;
         public GGraph stick;
         public const string URL = "ui://6hwzb14vtza28d";
@@ -20,6 +21,7 @@ namespace All
         {
             base.ConstructFromXML(xml);
 
+            show = GetControllerAt(0);
             back = (GGraph)GetChildAt(0);
             stick = (GGraph)GetChildAt(1);
         }

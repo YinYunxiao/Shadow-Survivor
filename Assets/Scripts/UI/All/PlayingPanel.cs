@@ -20,7 +20,6 @@ namespace All
         public HealthSegment hpBar;
         public GProgressBar xpBar;
         public GGroup top;
-        public Joystick joystick;
         public const string URL = "ui://6hwzb14vtza289";
 
         public static PlayingPanel CreateInstance()
@@ -45,7 +44,6 @@ namespace All
             hpBar = (HealthSegment)GetChildAt(7);
             xpBar = (GProgressBar)GetChildAt(8);
             top = (GGroup)GetChildAt(9);
-            joystick = (Joystick)GetChildAt(10);
         }
     }
 }

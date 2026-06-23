@@ -8,69 +8,80 @@ public class JoystickController
     private float _radius;
     private bool _isDragging;
 
-    private Vector2 _mouseStartPos;
-    private Vector2 _objStartPos;
+    private Vector2 _centerPos;
 
     public Vector2 InputDir => _inputDir;
     public bool IsActive => _isDragging;
 
-    public JoystickController(All.Joystick view)
+    public JoystickController(GComponent parent)
     {
-        _view = view;
+        _view = All.Joystick.CreateInstance();
+        parent.AddChild(_view);
+
         _radius = _view.back.height * 0.5f;
-        _objStartPos = _view.stick.position;
         _inputDir = Vector2.zero;
         _isDragging = false;
 
-        _view.stick.draggable = true;
-        BindEvents();
+        _view.show.SetSelectedIndex(0);
+
+        GRoot.inst.onTouchBegin.Add(OnTouchBegin);
+        GRoot.inst.onTouchMove.Add(OnTouchMove);
+        GRoot.inst.onTouchEnd.Add(OnTouchEnd);
     }
 
-    private void BindEvents()
+    private void OnTouchBegin(EventContext context)
     {
-        _view.stick.onDragStart.Add(OnDragStart);
-        _view.stick.onDragMove.Add(OnDragMove);
-        _view.stick.onDragEnd.Add(OnDragEnd);
-    }
+        Vector2 pos = GRoot.inst.GlobalToLocal(context.inputEvent.position);
 
-    private void OnDragStart(EventContext context)
-    {
+        // 只允许下半屏触摸
+        if (pos.y < GRoot.inst.height * 0.5f) return;
+
+        _centerPos = pos;
+        _view.SetPosition(pos.x, pos.y, 0);
+        _view.stick.SetPosition(_radius, _radius, 0);
+        _view.show.SetSelectedIndex(1);
         _isDragging = true;
-        _mouseStartPos = _view.GlobalToLocal(context.inputEvent.position);
+        _inputDir = Vector2.zero;
+
         context.CaptureTouch();
     }
 
-    private void OnDragMove(EventContext context)
+    private void OnTouchMove(EventContext context)
     {
-        Vector2 mousePos = _view.GlobalToLocal(context.inputEvent.position);
-        Vector2 offset = mousePos - _mouseStartPos;
+        if (!_isDragging) return;
 
-        Vector2 newPos;
+        Vector2 pos = GRoot.inst.GlobalToLocal(context.inputEvent.position);
+        Vector2 offset = pos - _centerPos;
+
         if (offset.magnitude > _radius)
-            newPos = _objStartPos + offset.normalized * _radius;
-        else
-            newPos = _objStartPos + offset;
+            offset = offset.normalized * _radius;
 
-        _view.stick.SetPosition(newPos.x, newPos.y, 0);
+        _view.stick.SetPosition(offset.x + _radius, offset.y + _radius, 0);
 
-        Vector2 stickOffset = newPos - _objStartPos;
-        _inputDir = new Vector2(stickOffset.x, -stickOffset.y) / _radius;
+        _inputDir = new Vector2(offset.x, -offset.y) / _radius;
 
         if (_inputDir.magnitude < 0.2f)
             _inputDir = Vector2.zero;
     }
 
-    private void OnDragEnd()
+    private void OnTouchEnd(EventContext context)
     {
+        if (!_isDragging) return;
+
         _isDragging = false;
         _inputDir = Vector2.zero;
-        _view.stick.SetPosition(_objStartPos.x, _objStartPos.y, 0);
+        _view.stick.SetPosition(0, 0, 0);
+        _view.show.SetSelectedIndex(0);
     }
 
     public void Dispose()
     {
-        _view.stick.onDragStart.Remove(OnDragStart);
-        _view.stick.onDragMove.Remove(OnDragMove);
-        _view.stick.onDragEnd.Remove(OnDragEnd);
+        GRoot.inst.onTouchBegin.Remove(OnTouchBegin);
+        GRoot.inst.onTouchMove.Remove(OnTouchMove);
+        GRoot.inst.onTouchEnd.Remove(OnTouchEnd);
+
+        if (_view.parent != null)
+            _view.parent.RemoveChild(_view);
+        _view.Dispose();
     }
 }
